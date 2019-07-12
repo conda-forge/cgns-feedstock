@@ -1,5 +1,5 @@
 {% set name = "cgns" %}
-{% set version = "3.2.1" %}
+{% set version = "3.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/{{ name|upper }}/{{ name|upper }}/archive/v{{ version }}.tar.gz
-  sha256: 677d0da94f0892b72b96da7cf4de51f661acfff1141c585af50a531fa161773f
+  sha256: 81093693b2e21a99c5640b82b267a495625b663d7b8125d5f1e9e7aaa1f8d469
   patches:
     - if-block.patch
 
