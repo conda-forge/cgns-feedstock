@@ -8,8 +8,6 @@ package:
 source:
   url: https://github.com/{{ name|upper }}/{{ name|upper }}/archive/v{{ version }}.tar.gz
   sha256: 81093693b2e21a99c5640b82b267a495625b663d7b8125d5f1e9e7aaa1f8d469
-  patches:
-    - if-block.patch
 
 build:
   number: 0
