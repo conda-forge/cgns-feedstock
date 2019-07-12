@@ -1,0 +1,13 @@
+diff --git a/src/cgns_f.F90 b/src/cgns_f.F90
+index 778860e..5094a34 100644
+--- a/src/cgns_f.F90
++++ b/src/cgns_f.F90
+@@ -3199,7 +3199,7 @@ MODULE cgns
+      END SUBROUTINE cg_array_info_f
+   END INTERFACE
+ 
+-!$ INTERFACE
++!!$ INTERFACE
+ !!$    SUBROUTINE cg_array_read_f(A, DATA, ier) BIND(C, NAME="")
+ !!$      INTEGER :: A,
+ !!$      void *DATA,
