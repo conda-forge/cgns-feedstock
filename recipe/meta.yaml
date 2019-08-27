@@ -1,5 +1,5 @@
 {% set name = "cgns" %}
-{% set version = "3.2.1" %}
+{% set version = "3.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,7 @@ package:
 
 source:
   url: https://github.com/{{ name|upper }}/{{ name|upper }}/archive/v{{ version }}.tar.gz
-  sha256: 677d0da94f0892b72b96da7cf4de51f661acfff1141c585af50a531fa161773f
-  patches:
-    - if-block.patch
+  sha256: 6372196caf25b27d38cf6f056258cb0bdd45757f49d9c59372b6dbbddb1e05da
 
 build:
   number: 0
@@ -23,10 +21,10 @@ requirements:
     - make
   host:
     - zlib
-    - hdf5 =1.8
+    - hdf5
   run:
     - zlib
-    - hdf5 =1.8
+    - hdf5
 
 test:
   commands:
