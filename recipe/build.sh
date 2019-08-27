@@ -21,7 +21,6 @@ cmake \
     -DHDF5_NEED_SZIP=OFF \
     -DHDF5_NEED_ZLIB=ON \
     ..
-sed -i.orig 's@^c@!c@' src/cgnslib_f.h
 
 make install -j$CPU_COUNT
 if [[ `uname -s` == 'Linux' ]]; then
