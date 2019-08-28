@@ -11,14 +11,13 @@ source:
 
 build:
   number: 0
-  skip: True  # [win]
+  skip: true  # [win and vc<14]
 
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ compiler('fortran') }}
     - cmake
-    - make
+    - make  # [unix]
   host:
     - zlib
     - hdf5
