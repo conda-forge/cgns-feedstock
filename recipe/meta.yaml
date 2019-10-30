@@ -10,8 +10,10 @@ source:
   sha256: 6372196caf25b27d38cf6f056258cb0bdd45757f49d9c59372b6dbbddb1e05da
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
+  run_exports:
+    - {{ pin_subpackage('cgns', max_pin='x.x') }}
 
 requirements:
   build:
@@ -19,9 +21,6 @@ requirements:
     - cmake
     - make  # [unix]
   host:
-    - zlib
-    - hdf5
-  run:
     - zlib
     - hdf5
 
