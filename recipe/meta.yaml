@@ -1,5 +1,5 @@
 {% set name = "cgns" %}
-{% set version = "3.4.1" %}
+{% set version = "4.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/{{ name|upper }}/{{ name|upper }}/archive/v{{ version }}.tar.gz
-  sha256: d32595e7737b9332243bd3de1eb8c018a272f620f09b289dea8292eba1365994
+  sha256: 748585a8e52dff4d250d6b603e6b847d05498e4566aba2dc3d7a7d85c4d55849
 
 build:
   number: 0
