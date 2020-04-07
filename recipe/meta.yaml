@@ -1,5 +1,5 @@
 {% set name = "cgns" %}
-{% set version = "4.0.0" %}
+{% set version = "4.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/{{ name|upper }}/{{ name|upper }}/archive/v{{ version }}.tar.gz
-  sha256: 748585a8e52dff4d250d6b603e6b847d05498e4566aba2dc3d7a7d85c4d55849
+  sha256: 055d345c3569df3ae832fb2611cd7e0bc61d56da41b2be1533407e949581e226
 
 build:
   number: 0
@@ -32,7 +32,7 @@ about:
   home: http://cgns.org
   license: Zlib
   license_file: LICENSE
-  summary: 'CFD General Notation System (CGNS)'
+  summary: CFD General Notation System (CGNS)
   description: |
     The CFD General Notation System (CGNS) provides a standard for
     recording and recovering computer data associated with the
