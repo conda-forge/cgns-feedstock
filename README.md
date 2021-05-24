@@ -157,5 +157,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@MicK7](https://github.com/MicK7/)
 * [@mdpiper](https://github.com/mdpiper/)
 
