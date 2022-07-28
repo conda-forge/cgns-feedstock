@@ -10,7 +10,7 @@ source:
   sha256: 7709eb7d99731dea0dd1eff183f109eaef8d9556624e3fbc34dc5177afc0a032
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('cgns', max_pin='x.x') }}
 
