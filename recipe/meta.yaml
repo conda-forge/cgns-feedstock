@@ -34,6 +34,7 @@ requirements:
     - tk
     - zlib
     - hdf5
+    - libglu  # [linux]
     - xorg-libxfixes  # [linux]
 
 test:
