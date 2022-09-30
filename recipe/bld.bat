@@ -13,3 +13,7 @@ if errorlevel 1 exit 1
 
 cmake --build . --target install --config Release
 if errorlevel 1 exit 1
+
+rem the build process installs some cgnstools binaries into %LIBRARY_PREFIX%/bin/cgnstools
+rem just move those into %LIBRARY_PREFIX%/bin
+mv "%LIBRARY_PREFIX%/bin/cgnstools/*" "%LIBRARY_PREFIX%/bin/"

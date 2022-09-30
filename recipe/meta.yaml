@@ -27,6 +27,7 @@ requirements:
 test:
   commands:
     - cgnscheck
+    - cgns_info  # cgnstools
 
 about:
   home: http://cgns.org
