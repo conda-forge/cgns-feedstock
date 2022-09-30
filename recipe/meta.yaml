@@ -22,12 +22,19 @@ requirements:
     - {{ compiler('fortran') }}
     - cmake
     - make  # [unix]
-    - tk
     - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
     - {{ cdt('libx11-devel') }}          # [linux]
+    - {{ cdt('mesa-libgl-devel') }}  # [linux]
+    - {{ cdt('mesa-dri-drivers') }}  # [linux]
+    - {{ cdt('libselinux') }}  # [linux]
+    - {{ cdt('libxdamage') }}  # [linux]
+    - {{ cdt('libxxf86vm') }}  # [linux]
+    - {{ cdt('libxext') }}     # [linux]
   host:
+    - tk
     - zlib
     - hdf5
+    - xorg-libxfixes  # [linux]
 
 test:
   commands:
