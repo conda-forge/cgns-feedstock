@@ -22,6 +22,8 @@ requirements:
     - {{ compiler('fortran') }}
     - cmake
     - make  # [unix]
+    - tcl
+    - tk
     - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
     - {{ cdt('libx11-devel') }}          # [linux]
   host:
