@@ -8,6 +8,7 @@ cmake -LAH -G"NMake Makefiles" ^
     -DCGNS_ENABLE_HDF5=ON ^
     -DHDF5_NEED_SZIP=OFF ^
     -DHDF5_NEED_ZLIB=ON ^
+    -DCGNS_BUILD_CGNSTOOLS=ON ^
     ..
 if errorlevel 1 exit 1
 
@@ -16,4 +17,4 @@ if errorlevel 1 exit 1
 
 rem the build process installs some cgnstools binaries into %LIBRARY_PREFIX%/bin/cgnstools
 rem just move those into %LIBRARY_PREFIX%/bin
-mv "%LIBRARY_PREFIX%/bin/cgnstools/*" "%LIBRARY_PREFIX%/bin/"
+move "%LIBRARY_PREFIX%/bin/cgnstools/*" "%LIBRARY_PREFIX%/bin/"
