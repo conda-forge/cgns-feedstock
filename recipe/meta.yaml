@@ -9,7 +9,7 @@ source:
   url: https://github.com/{{ name|upper }}/{{ name|upper }}/archive/v{{ version }}.tar.gz
   sha256: 7709eb7d99731dea0dd1eff183f109eaef8d9556624e3fbc34dc5177afc0a032
   patches:
-    - cgnstools-cmakelists-macos-opengl.patch  # [osx]
+    - no-gui-apps.patch  # [osx]
 
 build:
   number: 2
@@ -22,27 +22,14 @@ requirements:
     - {{ compiler('fortran') }}
     - cmake
     - make  # [unix]
-    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
-    - {{ cdt('libx11-devel') }}          # [linux]
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
-    - {{ cdt('libxext') }}     # [linux]
   host:
-    - tk
     - zlib
     - hdf5
-    - xorg-libsm  # [unix]
-    - xorg-libxmu # [unix]
-    - libglu  # [linux]
-    - xorg-libxfixes  # [linux]
 
 test:
   commands:
     - cgnscheck
-    - cgns_info  # cgnstools
+    - cgns_info  # from cgnstools/utilities
 
 about:
   home: http://cgns.org
