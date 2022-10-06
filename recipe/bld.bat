@@ -8,6 +8,7 @@ cmake -LAH -G"NMake Makefiles" ^
     -DCGNS_ENABLE_HDF5=ON ^
     -DHDF5_NEED_SZIP=OFF ^
     -DHDF5_NEED_ZLIB=ON ^
+    -DCGNS_BUILD_CGNSTOOLS=ON ^
     ..
 if errorlevel 1 exit 1
 

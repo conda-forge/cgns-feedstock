@@ -8,9 +8,11 @@ package:
 source:
   url: https://github.com/{{ name|upper }}/{{ name|upper }}/archive/v{{ version }}.tar.gz
   sha256: 7709eb7d99731dea0dd1eff183f109eaef8d9556624e3fbc34dc5177afc0a032
+  patches:
+    - no-gui-apps.patch
 
 build:
-  number: 1
+  number: 2
   run_exports:
     - {{ pin_subpackage('cgns', max_pin='x.x') }}
 
@@ -27,6 +29,7 @@ requirements:
 test:
   commands:
     - cgnscheck
+    - cgns_info  # from cgnstools/utilities
 
 about:
   home: http://cgns.org

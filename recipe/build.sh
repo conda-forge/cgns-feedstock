@@ -2,8 +2,8 @@
 
 mkdir _build && cd _build
 cmake ${CMAKE_ARGS} \
-    -DCMAKE_PREFIX_PATH=$PREFIX \
-    -DCMAKE_INSTALL_PREFIX=$PREFIX \
+    -DCMAKE_PREFIX_PATH=${PREFIX} \
+    -DCMAKE_INSTALL_PREFIX=${PREFIX} \
     -DCMAKE_BUILD_TYPE=Release \
     -DCGNS_BUILD_SHARED=ON \
     -DCGNS_USE_SHARED=ON \
@@ -15,6 +15,7 @@ cmake ${CMAKE_ARGS} \
     -DCGNS_ENABLE_HDF5=ON \
     -DHDF5_NEED_SZIP=OFF \
     -DHDF5_NEED_ZLIB=ON \
+    -DCGNS_BUILD_CGNSTOOLS=ON \
     ..
 
 make install -j$CPU_COUNT
@@ -23,3 +24,7 @@ if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}
     ctest
 fi
 fi
+
+# the build process installs some cgnstools binaries into ${CMAKE_INSTALL_PREFIX}/bin/cgnstools
+# just move those into ${CMAKE_INSTALL_PREFIX}/bin
+mv ${PREFIX}/bin/cgnstools/* ${PREFIX}/bin/
