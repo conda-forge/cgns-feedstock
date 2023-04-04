@@ -1,11 +1,11 @@
-About cgns
-==========
+About cgns-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cgns-feedstock/blob/main/LICENSE.txt)
 
 Home: http://cgns.org
 
 Package license: Zlib
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cgns-feedstock/blob/main/LICENSE.txt)
 
 Summary: CFD General Notation System (CGNS)
 

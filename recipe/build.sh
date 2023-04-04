@@ -1,5 +1,11 @@
 #! /usr/bin/env bash
 
+# Workaround for leftover build directory paths in HDF5 installation
+# https://github.com/HDFGroup/hdf5/issues/2422
+sed -i.tmp 's/-I.*H5FDsubfiling//' \
+    "$(which h5cc)" \
+    "$(which h5c++)"
+
 mkdir _build && cd _build
 cmake ${CMAKE_ARGS} \
     -DCMAKE_PREFIX_PATH=${PREFIX} \
