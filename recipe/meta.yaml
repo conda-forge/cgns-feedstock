@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/{{ name|upper }}/{{ name|upper }}/archive/v{{ version }}.tar.gz
-  sha256: 3B0615D1E6B566AA8772616BA5FD9CA4ECA1A600720E36EADD914BE348925FE2
+  sha256: 3b0615d1e6b566aa8772616ba5fd9ca4eca1a600720e36eadd914be348925fe2
   patches:
     - no-gui-apps.patch
 
