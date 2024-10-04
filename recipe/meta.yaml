@@ -12,13 +12,14 @@ source:
     - no-gui-apps.patch
 
 build:
-  number: 2
+  number: 3
   run_exports:
     - {{ pin_subpackage('cgns', max_pin='x.x') }}
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('fortran') }}
     - cmake
     - make  # [unix]
