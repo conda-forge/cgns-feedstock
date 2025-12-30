@@ -1,5 +1,5 @@
 {% set name = "cgns" %}
-{% set version = "4.5.0" %}
+{% set version = "4.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/{{ name|upper }}/{{ name|upper }}/archive/v{{ version }}.tar.gz
-  sha256: c72355219318755ba0a8646a8e56ee1c138cf909c1d738d258d2774fa4b529e9
+  sha256: 5da0e19907c1649a2f4b5d2abdb733674ae1a58d7436916a5fba1eb2f33f395f
   patches:
     - no-gui-apps.patch
 
 build:
-  number: 3
+  number: 0
   run_exports:
     - {{ pin_subpackage('cgns', max_pin='x.x') }}
 
